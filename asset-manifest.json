@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Lanh_KTMon/static/css/main.8ed71451.css",
+    "main.js": "/Lanh_KTMon/static/js/main.50ed2abc.js",
+    "index.html": "/Lanh_KTMon/index.html",
+    "main.8ed71451.css.map": "/Lanh_KTMon/static/css/main.8ed71451.css.map",
+    "main.50ed2abc.js.map": "/Lanh_KTMon/static/js/main.50ed2abc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ed71451.css",
+    "static/js/main.50ed2abc.js"
+  ]
+}
