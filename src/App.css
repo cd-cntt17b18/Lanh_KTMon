@@ -1,0 +1,260 @@
+/* src/App.css */
+
+/* Áp dụng ảnh nền cho toàn bộ trang */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow-y: auto;
+  background-image: url("https://photo2.tinhte.vn/data/attachment-files/2017/12/4194176_Dark-Star-Orianna-Khazix-LoL-4K-Wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(19, 216, 157);
+}
+
+/* Thanh điều hướng */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 0; /* Giảm chiều cao của thanh navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: rgb(202, 202, 202);
+  text-decoration: none;
+  font-size: 16px; /* Giảm font size của các mục */
+  padding: 10px 20px;
+  margin: 0 15px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  background-color: #eceef0;
+}
+
+/* Phần container chứa form đăng nhập */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  margin-top: 80px; /* Đẩy phần đăng nhập xuống dưới thanh navbar */
+  overflow-y: auto;
+  height: calc(100vh - 80px); /* Đảm bảo phần dưới không bị che khuất */
+}
+
+/* Phần đăng nhập */
+.auth-section {
+  max-width: 600px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px; /* Thêm padding dưới để tránh bị dính vào cạnh dưới */
+}
+
+/* Phần đăng ký */
+.register-form {
+  background-color: rgba(221, 197, 197, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  margin: 0 auto;
+  color: #333;
+  text-align: left;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.register-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Input và các trường dữ liệu */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease;
+}
+
+/* Hiệu ứng focus cho input */
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+  border-color: #1c87ce;
+  background-color: #eaf2f8;
+  outline: none;
+}
+
+/* Nút đăng ký */
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3488c0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.register-form button:hover {
+  background-color: #217ab6;
+}
+
+/* Nút quay lại */
+.btn-back {
+  background-color: transparent;
+  color: #e74c3c;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.btn-back:hover {
+  color: #c0392b;
+}
+
+/* Phần danh sách game */
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 350px;
+  width: 100%;
+  overflow-y: hidden; /* Xóa thanh cuộn */
+}
+
+/* Thẻ game */
+.game-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.game-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.game-card .btn-play-game {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0a7dca;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.game-card .btn-play-game:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+/* Thêm các phần dịch vụ, liên hệ, hỗ trợ */
+.services-contact-support {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 30%;
+}
+
+.section h2 {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+/* Thanh điều hướng */
+.navbar {
+  display: flex;
+  justify-content: center; /* Căn giữa các mục trong navbar */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Sửa lại ul để danh sách nằm ngang */
+.navbar ul {
+  list-style: none; /* Bỏ dấu chấm đầu dòng */
+  display: flex; /* Sử dụng Flexbox để căn chỉnh ngang */
+  margin: 0;
+  padding: 0;
+}
+
+/* Sửa lại li để các mục nằm ngang */
+.navbar li {
+  margin: 0 20px; /* Khoảng cách giữa các mục */
+}
+
+/* Các mục a trong navbar */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #1a82c7;
+}
